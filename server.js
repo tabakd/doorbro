@@ -8,8 +8,8 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/', (req, res) => {
   let resp = new twilio.TwimlResponse();
-  resp.say('Password?');
   resp.dial('+16479296609');
+  resp.dial('+16472270565');
   res.header('Content-Type', 'text/xml');
   res.send(resp.toString());
 });
