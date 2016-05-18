@@ -14,6 +14,6 @@ app.post('/', (req, res) => {
   res.send(resp.toString());
 });
 
-app.listen(5000, function () {
+app.listen((process.env.PORT || 5000), function () {
   console.log('Example app listening on port 5000!');
 });
