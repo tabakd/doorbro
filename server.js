@@ -8,10 +8,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/', (req, res) => {
   let resp = new twilio.TwimlResponse();
-  resp.dial({}, function(){
-    this.number('+16479296609');
-    this.number('+16472270565');
-  })
+  resp.play({digits: [6,6,6]});
   res.header('Content-Type', 'text/xml');
   res.send(resp.toString());
 });
