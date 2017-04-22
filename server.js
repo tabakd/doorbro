@@ -8,7 +8,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 
 app.post('/', (req, res) => {
   let resp = new twilio.TwimlResponse();
-  resp.play({digits: [request.query.digit || 6]});
+  resp.play({digits: [req.query.digit || 6]});
   res.header('Content-Type', 'text/xml');
   res.send(resp.toString());
 
