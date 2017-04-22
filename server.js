@@ -1,7 +1,6 @@
 import twilio from 'twilio';
 import bodyParser from 'body-parser';
 import express from 'express';
-import requestAccess from './telegramAuth';
 
 let app = express();
 
